@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping 
+    PUBLIC "-//Hibernate/Hibernate Mapping DTED 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="com.irengine.checkpoint.entity"> 
+  <class name="Stock" table="STOCKS"> 
+    <id name="id" type="int" column="ID"> 
+      <generator class="identity"/> 
+    </id> 
+    <property name="symbol" type="string"> 
+      <column name="SYMBOL" length="5" not-null="true"/> 
+    </property> 
+    <property name="exchangeId" type="string" column="EXCHANGE_ID"/> 
+    <property name="quantityAvailable" type="int" column="QUANTITY_AVAILABLE"/> 
+    <property name="sharePrice" type="float" column="PRICE_PER_SHARE"/> 
+    <property name="purchaseDate" type="date" column="PURCHASE_DATE"/> 
+    <property name="inventoryCode" type="string" column="INVENTORY_CODE"/> 
+  </class> 
+</hibernate-mapping> 
